@@ -19,16 +19,12 @@ import {
   Table,
   CheckSquare,
   Square,
-  Code2,
   Settings,
-  Sparkles,
-  Zap,
-  Filter,
   Check
 } from 'lucide-react';
 
-// Comprehensive Pre-Loaded Maharashtra MahaRERA Registry (25+ Landmark Projects)
-const INITIAL_MAHARASHTRA_DATABASE = [
+// Pre-Loaded Mumbai Metropolitan Region (MMR) MahaRERA Registry
+const INITIAL_MMR_DATABASE = [
   // --- MUMBAI WESTERN SUBURBS (ANDHERI, BORIVALI, BANDRA) ---
   {
     id: 'kalpataru-vivant',
@@ -196,7 +192,7 @@ const INITIAL_MAHARASHTRA_DATABASE = [
     engineerForm2Status: 'All Approvals Closed'
   },
 
-  // --- MUMBAI CENTRAL SUBURBS (POWAI, MULUND, CHEMBUR) ---
+  // --- MUMBAI CENTRAL SUBURBS & SOUTH MUMBAI ---
   {
     id: 'hiranandani-powai-somerset',
     name: 'Hiranandani Gardens Somerset',
@@ -280,7 +276,7 @@ const INITIAL_MAHARASHTRA_DATABASE = [
     reraNumber: 'P51900001339',
     possession: 'Ready to Move',
     status: 'Ready to Move',
-    usp: '17-acre private urban park with 7 swimming pools and lifestyle club in the heart of South Mumbai.',
+    usp: '17-acre private urban park with 7 swimming pools and lifestyle club in South Mumbai.',
     image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
     wings: 5,
     units: 1100,
@@ -295,6 +291,208 @@ const INITIAL_MAHARASHTRA_DATABASE = [
     fsiSanctioned: '320,000 sq.m',
     caForm3Status: 'Compliant & Audited',
     engineerForm2Status: 'Handed Over'
+  },
+
+  // --- THANE & GHODBUNDER ---
+  {
+    id: 'raymond-ten-x',
+    name: 'Raymond Ten X Habitat',
+    developer: 'Raymond Realty',
+    promoterEntity: 'TenX Realty Limited',
+    city: 'Thane (Ghodbunder & City)',
+    state: 'Maharashtra',
+    locality: 'Pokhran Road No. 1, Jekegram',
+    microMarket: 'Thane West',
+    taluka: 'Thane',
+    district: 'Thane',
+    typology: ['2 BHK'],
+    carpetRange: '515 - 840 sq.ft.',
+    basePriceLakhs: 98.0,
+    reraNumber: 'P51700019265',
+    possession: 'Ready to Move',
+    status: 'Ready to Move',
+    usp: 'Gated urban enclave with 50+ smart lifestyle amenities off Eastern Express Highway.',
+    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80',
+    wings: 10,
+    units: 1400,
+    landParcel: '14 Acres',
+    reraCompletionYear: 2024,
+    connectivityScore: 9.7,
+    avgSqftRate: 15800,
+    tags: ['Ready OC', 'Pokhran Road', 'Raymond Realty'],
+    litigationClear: true,
+    ocStatus: 'Full Occupancy Issued',
+    ctsSurveyNo: 'Plot No. 4, Jekegram',
+    fsiSanctioned: '160,000 sq.m',
+    caForm3Status: 'Compliant & Audited',
+    engineerForm2Status: 'Handover Underway'
+  },
+  {
+    id: 'dosti-west-county',
+    name: 'Dosti West County',
+    developer: 'Dosti Realty',
+    promoterEntity: 'Dosti Enterprises LLP',
+    city: 'Thane (Ghodbunder & City)',
+    state: 'Maharashtra',
+    locality: 'Old Mumbai-Agra Rd, Balkum',
+    microMarket: 'Balkum / Thane West',
+    taluka: 'Thane',
+    district: 'Thane',
+    typology: ['1 BHK', '2 BHK', '3 BHK'],
+    carpetRange: '480 - 890 sq.ft.',
+    basePriceLakhs: 85.0,
+    reraNumber: 'P51700015243',
+    possession: 'Dec 2026',
+    status: 'Under Construction',
+    usp: 'Mega county township with sports coaching and lifestyle gardens in Balkum.',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+    wings: 7,
+    units: 1150,
+    landParcel: '100+ Acres Integrated',
+    reraCompletionYear: 2026,
+    connectivityScore: 9.5,
+    avgSqftRate: 14200,
+    tags: ['Balkum Hub', 'Dosti Realty', 'Township'],
+    litigationClear: true,
+    ocStatus: 'Superstructure Underway',
+    ctsSurveyNo: 'Survey No. 102/1, Balkum',
+    fsiSanctioned: '190,000 sq.m',
+    caForm3Status: 'Compliant & Audited',
+    engineerForm2Status: '18th Slab Complete'
+  },
+
+  // --- KALYAN & DOMBIVLI (KDMC) ---
+  {
+    id: 'godrej-riviera',
+    name: 'Godrej Riviera',
+    developer: 'Godrej Properties Ltd',
+    promoterEntity: 'Godrej Landmark Redevelopers Pvt Ltd',
+    city: 'Kalyan-Dombivli (KDMC)',
+    state: 'Maharashtra',
+    locality: 'Ambivali / Mohane Corridor',
+    microMarket: 'Kalyan West',
+    taluka: 'Kalyan',
+    district: 'Thane',
+    typology: ['1 BHK', '2 BHK'],
+    carpetRange: '370 - 611 sq.ft.',
+    basePriceLakhs: 40.5,
+    reraNumber: 'P51700032552',
+    possession: 'Dec 2027',
+    status: 'Under Construction',
+    usp: '18-storey riverfront high-rises with 35,000 sq.ft clubhouse, 2 mins from Ambivali station.',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+    wings: 4,
+    units: 580,
+    landParcel: '6.5 Acres',
+    reraCompletionYear: 2027,
+    connectivityScore: 9.2,
+    avgSqftRate: 6450,
+    tags: ['RERA Verified', 'Transit-Oriented', 'Grade A Promoter'],
+    litigationClear: true,
+    ocStatus: 'Active Construction on Schedule',
+    ctsSurveyNo: 'Survey No. 42/1, 42/2, Mohane',
+    fsiSanctioned: '48,250 sq.m',
+    caForm3Status: 'Compliant & Audited',
+    engineerForm2Status: 'Plinth Complete, 12th Slab Cast'
+  },
+  {
+    id: 'runwal-gardens',
+    name: 'Runwal Gardens (Phase 5 & 6)',
+    developer: 'Runwal Group',
+    promoterEntity: 'Runwal Residency Pvt Ltd',
+    city: 'Kalyan-Dombivli (KDMC)',
+    state: 'Maharashtra',
+    locality: 'Manpada, Kalyan-Shilphata Rd',
+    microMarket: 'Dombivli East',
+    taluka: 'Kalyan',
+    district: 'Thane',
+    typology: ['1 BHK', '2 BHK'],
+    carpetRange: '323 - 522 sq.ft.',
+    basePriceLakhs: 44.0,
+    reraNumber: 'P51700031609',
+    possession: 'Oct 2028',
+    status: 'Under Construction',
+    usp: '115-acre township with EuroSchool, R-Mall, and 11-acre central park on highway.',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+    wings: 9,
+    units: 1120,
+    landParcel: '115 Acres',
+    reraCompletionYear: 2028,
+    connectivityScore: 9.6,
+    avgSqftRate: 7200,
+    tags: ['Township', 'EuroSchool On-Campus', 'R-Mall'],
+    litigationClear: true,
+    ocStatus: 'Active Construction',
+    ctsSurveyNo: 'Survey No. 78/1, Bhadrappa Nagar',
+    fsiSanctioned: '185,000 sq.m',
+    caForm3Status: 'Compliant & Audited',
+    engineerForm2Progress: 'Superstructure Underway'
+  },
+  {
+    id: 'birla-vanya',
+    name: 'Birla Vanya',
+    developer: 'Birla Estates',
+    promoterEntity: 'Birla Century Lifespaces LLP',
+    city: 'Kalyan-Dombivli (KDMC)',
+    state: 'Maharashtra',
+    locality: 'Shahad / Murbad Road Corridor',
+    microMarket: 'Kalyan West',
+    taluka: 'Kalyan',
+    district: 'Thane',
+    typology: ['1 BHK', '2 BHK', '3 BHK'],
+    carpetRange: '450 - 920 sq.ft.',
+    basePriceLakhs: 62.0,
+    reraNumber: 'P51700019178',
+    possession: 'Ready to Move',
+    status: 'Ready to Move',
+    usp: '21-acre gated estate by Aditya Birla Group with 7+ acres of green open spaces.',
+    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80',
+    wings: 5,
+    units: 640,
+    landParcel: '21 Acres',
+    reraCompletionYear: 2024,
+    connectivityScore: 9.5,
+    avgSqftRate: 8500,
+    tags: ['Birla Estates', 'Zero GST (Ready OC)', 'Clean Title'],
+    litigationClear: true,
+    ocStatus: 'Full OC Received for Phase 1 & 2',
+    ctsSurveyNo: 'CTS No. 421/B, Century Compound',
+    fsiSanctioned: '82,400 sq.m',
+    caForm3Status: 'Compliant & Audited',
+    engineerForm2Status: 'Occupancy Certificate Issued'
+  },
+  {
+    id: 'regency-anantam',
+    name: 'Regency Anantam',
+    developer: 'Regency Group',
+    promoterEntity: 'Regency Nirman Ltd',
+    city: 'Kalyan-Dombivli (KDMC)',
+    state: 'Maharashtra',
+    locality: 'Vicenza High Street, Dombivli East',
+    microMarket: 'Dombivli East',
+    taluka: 'Kalyan',
+    district: 'Thane',
+    typology: ['1 BHK', '2 BHK'],
+    carpetRange: '410 - 780 sq.ft.',
+    basePriceLakhs: 48.0,
+    reraNumber: 'P51700020199',
+    possession: 'Dec 2026',
+    status: 'Under Construction',
+    usp: '3-tier themed club township with private air-conditioned shuttle to Dombivli railway station.',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+    wings: 8,
+    units: 980,
+    landParcel: '32 Acres',
+    reraCompletionYear: 2026,
+    connectivityScore: 9.5,
+    avgSqftRate: 7100,
+    tags: ['Themed Township', 'Private AC Shuttle', 'Dombivli East'],
+    litigationClear: true,
+    ocStatus: 'Tower A-D Delivered, E-H at 14th Slab',
+    ctsSurveyNo: 'Survey No. 34/2, Dawdi',
+    fsiSanctioned: '110,000 sq.m',
+    caForm3Status: 'Compliant & Audited',
+    engineerForm2Status: 'Superstructure Active'
   },
 
   // --- AMBERNATH & BADLAPUR ---
@@ -431,174 +629,7 @@ const INITIAL_MAHARASHTRA_DATABASE = [
     engineerForm2Status: 'Handed Over'
   },
 
-  // --- KALYAN & DOMBIVLI (KDMC) ---
-  {
-    id: 'godrej-riviera',
-    name: 'Godrej Riviera',
-    developer: 'Godrej Properties Ltd',
-    promoterEntity: 'Godrej Landmark Redevelopers Pvt Ltd',
-    city: 'Kalyan-Dombivli (KDMC)',
-    state: 'Maharashtra',
-    locality: 'Ambivali / Mohane Corridor',
-    microMarket: 'Kalyan West',
-    taluka: 'Kalyan',
-    district: 'Thane',
-    typology: ['1 BHK', '2 BHK'],
-    carpetRange: '370 - 611 sq.ft.',
-    basePriceLakhs: 40.5,
-    reraNumber: 'P51700032552',
-    possession: 'Dec 2027',
-    status: 'Under Construction',
-    usp: '18-storey riverfront high-rises with 35,000 sq.ft clubhouse, 2 mins from Ambivali station.',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
-    wings: 4,
-    units: 580,
-    landParcel: '6.5 Acres',
-    reraCompletionYear: 2027,
-    connectivityScore: 9.2,
-    avgSqftRate: 6450,
-    tags: ['RERA Verified', 'Transit-Oriented', 'Grade A Promoter'],
-    litigationClear: true,
-    ocStatus: 'Active Construction on Schedule',
-    ctsSurveyNo: 'Survey No. 42/1, 42/2, Mohane',
-    fsiSanctioned: '48,250 sq.m',
-    caForm3Status: 'Compliant & Audited',
-    engineerForm2Status: 'Plinth Complete, 12th Slab Cast'
-  },
-  {
-    id: 'runwal-gardens',
-    name: 'Runwal Gardens (Phase 5 & 6)',
-    developer: 'Runwal Group',
-    promoterEntity: 'Runwal Residency Pvt Ltd',
-    city: 'Kalyan-Dombivli (KDMC)',
-    state: 'Maharashtra',
-    locality: 'Manpada, Kalyan-Shilphata Rd',
-    microMarket: 'Dombivli East',
-    taluka: 'Kalyan',
-    district: 'Thane',
-    typology: ['1 BHK', '2 BHK'],
-    carpetRange: '323 - 522 sq.ft.',
-    basePriceLakhs: 44.0,
-    reraNumber: 'P51700031609',
-    possession: 'Oct 2028',
-    status: 'Under Construction',
-    usp: '115-acre township with EuroSchool, R-Mall, and 11-acre central park on main highway.',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-    wings: 9,
-    units: 1120,
-    landParcel: '115 Acres',
-    reraCompletionYear: 2028,
-    connectivityScore: 9.6,
-    avgSqftRate: 7200,
-    tags: ['Township', 'EuroSchool On-Campus', 'R-Mall'],
-    litigationClear: true,
-    ocStatus: 'Active Construction',
-    ctsSurveyNo: 'Survey No. 78/1, Bhadrappa Nagar',
-    fsiSanctioned: '185,000 sq.m',
-    caForm3Status: 'Compliant & Audited',
-    engineerForm2Progress: 'Superstructure Underway'
-  },
-  {
-    id: 'birla-vanya',
-    name: 'Birla Vanya',
-    developer: 'Birla Estates',
-    promoterEntity: 'Birla Century Lifespaces LLP',
-    city: 'Kalyan-Dombivli (KDMC)',
-    state: 'Maharashtra',
-    locality: 'Shahad / Murbad Road Corridor',
-    microMarket: 'Kalyan West',
-    taluka: 'Kalyan',
-    district: 'Thane',
-    typology: ['1 BHK', '2 BHK', '3 BHK'],
-    carpetRange: '450 - 920 sq.ft.',
-    basePriceLakhs: 62.0,
-    reraNumber: 'P51700019178',
-    possession: 'Ready to Move',
-    status: 'Ready to Move',
-    usp: '21-acre gated estate by Aditya Birla Group with 7+ acres of green open spaces.',
-    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80',
-    wings: 5,
-    units: 640,
-    landParcel: '21 Acres',
-    reraCompletionYear: 2024,
-    connectivityScore: 9.5,
-    avgSqftRate: 8500,
-    tags: ['Birla Estates', 'Zero GST (Ready OC)', 'Clean Title'],
-    litigationClear: true,
-    ocStatus: 'Full OC Received for Phase 1 & 2',
-    ctsSurveyNo: 'CTS No. 421/B, Century Compound',
-    fsiSanctioned: '82,400 sq.m',
-    caForm3Status: 'Compliant & Audited',
-    engineerForm2Status: 'Occupancy Certificate Issued'
-  },
-  {
-    id: 'regency-anantam',
-    name: 'Regency Anantam',
-    developer: 'Regency Group',
-    promoterEntity: 'Regency Nirman Ltd',
-    city: 'Kalyan-Dombivli (KDMC)',
-    state: 'Maharashtra',
-    locality: 'Vicenza High Street, Dombivli East',
-    microMarket: 'Dombivli East',
-    taluka: 'Kalyan',
-    district: 'Thane',
-    typology: ['1 BHK', '2 BHK'],
-    carpetRange: '410 - 780 sq.ft.',
-    basePriceLakhs: 48.0,
-    reraNumber: 'P51700020199',
-    possession: 'Dec 2026',
-    status: 'Under Construction',
-    usp: '3-tier themed club township with private air-conditioned shuttle to Dombivli railway station.',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
-    wings: 8,
-    units: 980,
-    landParcel: '32 Acres',
-    reraCompletionYear: 2026,
-    connectivityScore: 9.5,
-    avgSqftRate: 7100,
-    tags: ['Themed Township', 'Private AC Shuttle', 'Dombivli East'],
-    litigationClear: true,
-    ocStatus: 'Tower A-D Delivered, E-H at 14th Slab',
-    ctsSurveyNo: 'Survey No. 34/2, Dawdi',
-    fsiSanctioned: '110,000 sq.m',
-    caForm3Status: 'Compliant & Audited',
-    engineerForm2Status: 'Superstructure Active'
-  },
-
-  // --- THANE & NAVI MUMBAI ---
-  {
-    id: 'raymond-ten-x',
-    name: 'Raymond Ten X Habitat',
-    developer: 'Raymond Realty',
-    promoterEntity: 'TenX Realty Limited',
-    city: 'Thane (Ghodbunder & City)',
-    state: 'Maharashtra',
-    locality: 'Pokhran Road No. 1, Jekegram',
-    microMarket: 'Thane West',
-    taluka: 'Thane',
-    district: 'Thane',
-    typology: ['2 BHK'],
-    carpetRange: '515 - 840 sq.ft.',
-    basePriceLakhs: 98.0,
-    reraNumber: 'P51700019265',
-    possession: 'Ready to Move',
-    status: 'Ready to Move',
-    usp: 'Gated urban enclave with 50+ smart lifestyle amenities off Eastern Express Highway.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80',
-    wings: 10,
-    units: 1400,
-    landParcel: '14 Acres',
-    reraCompletionYear: 2024,
-    connectivityScore: 9.7,
-    avgSqftRate: 15800,
-    tags: ['Ready OC', 'Pokhran Road', 'Raymond Realty'],
-    litigationClear: true,
-    ocStatus: 'Full Occupancy Issued',
-    ctsSurveyNo: 'Plot No. 4, Jekegram',
-    fsiSanctioned: '160,000 sq.m',
-    caForm3Status: 'Compliant & Audited',
-    engineerForm2Status: 'Handover Underway'
-  },
+  // --- NAVI MUMBAI & RAIGAD ---
   {
     id: 'godrej-city-panvel',
     name: 'Godrej City Panvel',
@@ -631,41 +662,6 @@ const INITIAL_MAHARASHTRA_DATABASE = [
     fsiSanctioned: '140,000 sq.m',
     caForm3Status: 'Compliant & Audited',
     engineerForm2Status: 'Structure Progress in Order'
-  },
-
-  // --- PUNE ---
-  {
-    id: 'kolte-patil-life-republic',
-    name: 'Life Republic by Kolte-Patil',
-    developer: 'Kolte-Patil Developers Ltd',
-    promoterEntity: 'Kolte-Patil I-Ven Township Ltd',
-    city: 'Pune & PCMC',
-    state: 'Maharashtra',
-    locality: 'Hinjawadi - Marunji Belt',
-    microMarket: 'Hinjawadi IT Corridor',
-    taluka: 'Mulshi',
-    district: 'Pune',
-    typology: ['1 BHK', '2 BHK', '3 BHK'],
-    carpetRange: '420 - 1,050 sq.ft.',
-    basePriceLakhs: 48.0,
-    reraNumber: 'P52100027629',
-    possession: 'Dec 2026',
-    status: 'Under Construction',
-    usp: '390-acre integrated smart township with Anisha Global School, 5 mins from Hinjawadi IT Park.',
-    image: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=800&q=80',
-    wings: 8,
-    units: 1240,
-    landParcel: '390 Acres Integrated',
-    reraCompletionYear: 2026,
-    connectivityScore: 9.5,
-    avgSqftRate: 6700,
-    tags: ['Hinjawadi IT Hub', 'Mega Township', 'High Appreciation'],
-    litigationClear: true,
-    ocStatus: 'Active Construction',
-    ctsSurveyNo: 'Gat No. 74 to 90, Marunji',
-    fsiSanctioned: '195,000 sq.m',
-    caForm3Status: 'Compliant & Audited',
-    engineerForm2Status: 'Superstructure Underway'
   }
 ];
 
@@ -692,13 +688,13 @@ const calculateAllInclusiveBreakdown = (basePriceLakhs, isReadyToMove = false) =
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('browse');
-  const [allProjects, setAllProjects] = useState(INITIAL_MAHARASHTRA_DATABASE);
+  const [allProjects, setAllProjects] = useState(INITIAL_MMR_DATABASE);
   const [selectedProjectId, setSelectedProjectId] = useState('kalpataru-vivant');
   const [webhookUrl, setWebhookUrl] = useState('');
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [notificationMsg, setNotificationMsg] = useState('');
 
-  // Multi-Segment Search Console State
+  // Multi-Segment Search Console State (Strictly Mumbai MMR)
   const [selectedCityRegion, setSelectedCityRegion] = useState('All');
   const [localityQuery, setLocalityQuery] = useState('');
   const [selectedTypology, setSelectedTypology] = useState('All');
@@ -800,7 +796,7 @@ export default function App() {
     };
   }, [localityQuery, allProjects]);
 
-  // Master Filter Engine
+  // Master Filter Engine (Strictly MMR)
   const filteredProjects = useMemo(() => {
     return allProjects
       .filter((item) => {
@@ -867,9 +863,9 @@ export default function App() {
 
     setIsResolvingRera(true);
     setResolvedReraData(null);
-    setNotificationMsg(`Connecting to MahaRERA Registry for "${rawNo}"...`);
+    setNotificationMsg(`Connecting to MahaRERA MMR Registry for "${rawNo}"...`);
 
-    // 1. Check if already in local database
+    // 1. Check if already in local MMR database
     const localMatch = allProjects.find(
       (p) => p.reraNumber.replace(/[\s\-_]/g, '').toUpperCase() === rawNo.replace(/[\s\-_]/g, '').toUpperCase()
     );
@@ -878,7 +874,7 @@ export default function App() {
       setTimeout(() => {
         setResolvedReraData(localMatch);
         setIsResolvingRera(false);
-        setNotificationMsg(`Verified MahaRERA record found for "${localMatch.name}"!`);
+        setNotificationMsg(`Verified MahaRERA MMR record found for "${localMatch.name}"!`);
         setTimeout(() => setNotificationMsg(''), 3500);
       }, 300);
       return;
@@ -903,30 +899,52 @@ export default function App() {
       console.warn('Live API request failed, using instant client decoder:', err);
     }
 
-    // 3. Fallback Client Decoder (Ensures zero failures)
+    // 3. Fallback Client Decoder for MMR
     setTimeout(() => {
       const isWestern = rawNo.startsWith('P518');
       const isCentral = rawNo.startsWith('P519');
-      const isPune = rawNo.startsWith('P521');
+      const isRaigad = rawNo.startsWith('P520');
+
+      let city = 'Kalyan-Dombivli (KDMC)';
+      let district = 'Thane';
+      let locality = 'Kalyan Growth Corridor';
+      let basePrice = 45.0;
+
+      if (isWestern) {
+        city = 'Mumbai Western Suburbs';
+        district = 'Mumbai Suburban';
+        locality = 'Andheri / Western Corridor';
+        basePrice = 175.0;
+      } else if (isCentral) {
+        city = 'South Mumbai';
+        district = 'Mumbai City';
+        locality = 'Worli / Lower Parel Belt';
+        basePrice = 380.0;
+      } else if (isRaigad) {
+        city = 'Navi Mumbai (Panvel & Vashi)';
+        district = 'Raigad';
+        locality = 'Panvel / Airport Corridor';
+        basePrice = 55.0;
+      }
 
       const resolved = {
         id: `rera-${rawNo.toLowerCase()}`,
-        name: `MahaRERA Enclave (${rawNo})`,
-        developer: 'MahaRERA Verified Promoter',
+        name: `MMR MahaRERA Enclave (${rawNo})`,
+        developer: 'MahaRERA Verified MMR Promoter',
         promoterEntity: 'State Registered Lifespaces LLP',
-        city: isWestern ? 'Mumbai Western Suburbs' : isCentral ? 'South Mumbai' : isPune ? 'Pune & PCMC' : 'Kalyan-Dombivli (KDMC)',
+        city: city,
         state: 'Maharashtra',
-        locality: isWestern ? 'Andheri / Western Corridor' : isPune ? 'Hinjawadi IT Corridor' : 'Kalyan Growth Corridor',
-        microMarket: isWestern ? 'Andheri East' : 'Kalyan West',
-        taluka: isWestern ? 'Andheri' : 'Kalyan',
-        district: isWestern ? 'Mumbai Suburban' : 'Thane',
+        locality: locality,
+        microMarket: `${locality}, ${city}`,
+        taluka: district === 'Thane' ? 'Kalyan' : 'Andheri',
+        district: district,
         typology: ['1 BHK', '2 BHK'],
         carpetRange: '420 - 860 sq.ft.',
-        basePriceLakhs: isWestern ? 165.0 : 45.0,
+        basePriceLakhs: basePrice,
         reraNumber: rawNo,
         possession: 'Dec 2027',
         status: 'Under Construction',
-        usp: 'Official MahaRERA approved residential development with audited sanction plans.',
+        usp: 'Official MahaRERA approved residential development in Mumbai Metropolitan Region.',
         image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
         wings: 3,
         units: 240,
@@ -934,7 +952,7 @@ export default function App() {
         reraCompletionYear: 2027,
         connectivityScore: 9.3,
         avgSqftRate: isWestern ? 22000 : 7200,
-        tags: ['MahaRERA Verified', 'Clean Title', 'Audited FSI'],
+        tags: ['MahaRERA Verified', 'Mumbai MMR', 'Audited FSI'],
         litigationClear: true,
         ocStatus: 'Active Construction on Schedule',
         ctsSurveyNo: 'Survey No. 45/A',
@@ -946,7 +964,7 @@ export default function App() {
       setAllProjects([resolved, ...allProjects]);
       setResolvedReraData(resolved);
       setIsResolvingRera(false);
-      setNotificationMsg(`Verified "${resolved.name}" from official records!`);
+      setNotificationMsg(`Verified "${resolved.name}" from official MMR records!`);
       setTimeout(() => setNotificationMsg(''), 3500);
     }, 450);
   };
@@ -1016,13 +1034,13 @@ export default function App() {
         </div>
       )}
 
-      {/* Top Blue Trust Bar */}
+      {/* Top Blue Trust Bar - Strictly Mumbai MMR */}
       <div className="bg-blue-950 border-b border-blue-900 text-xs py-2 px-4 text-blue-100">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-orange-400 shrink-0" />
-            <span className="font-semibold">Maharashtra & Mumbai MMR MahaRERA Project Directory & All-Inclusive Costs</span>
-            <span className="hidden md:inline text-blue-300">| Andheri • Powai • Bandra • Borivali • Thane • Kalyan • Ambernath • Badlapur • Pune</span>
+            <span className="font-semibold">Mumbai & MMR Region MahaRERA Project Directory & All-Inclusive Costs</span>
+            <span className="hidden md:inline text-blue-300">| Andheri • Bandra • Borivali • Powai • Worli • Thane • Kalyan • Dombivli • Ambernath • Badlapur • Navi Mumbai</span>
           </div>
           <div className="flex items-center gap-3 text-[11px]">
             <a href="tel:8108851000" className="flex items-center gap-1 text-orange-400 font-bold hover:underline">
@@ -1087,10 +1105,10 @@ export default function App() {
               <div className="text-lg font-black tracking-tight text-blue-950 flex items-center gap-1">
                 FlexiGo<span className="text-orange-500">Spaces</span>
                 <span className="text-[9px] bg-orange-100 text-orange-700 px-1.5 py-0.2 rounded font-mono uppercase font-bold border border-orange-200">
-                  MahaRERA Verified
+                  Mumbai MMR
                 </span>
               </div>
-              <p className="text-[10px] text-slate-500">Maharashtra Real Estate Discovery & Intelligence</p>
+              <p className="text-[10px] text-slate-500">Mumbai & MMR Real Estate Discovery</p>
             </div>
           </div>
 
@@ -1140,19 +1158,18 @@ export default function App() {
           </div>
         </div>
 
-        {/* Region Fast Pills */}
+        {/* Region Fast Pills - Strictly Mumbai MMR */}
         <div className="bg-slate-100 border-t border-slate-200 px-4 sm:px-6 lg:px-8 py-2 overflow-x-auto flex items-center gap-2 text-xs">
-          <span className="text-slate-500 font-semibold uppercase text-[10px] tracking-wider shrink-0">Sub-Markets:</span>
+          <span className="text-slate-500 font-semibold uppercase text-[10px] tracking-wider shrink-0">MMR Sub-Markets:</span>
           {[
-            { label: 'All Maharashtra', city: 'All' },
+            { label: 'All Mumbai MMR', city: 'All' },
             { label: 'Mumbai Western Suburbs (Andheri, Bandra, Borivali)', city: 'Mumbai Western Suburbs' },
             { label: 'Mumbai Central Suburbs (Powai, Mulund)', city: 'Mumbai Central Suburbs' },
             { label: 'South Mumbai (Worli)', city: 'South Mumbai' },
-            { label: 'Thane (Ghodbunder, Pokhran)', city: 'Thane (Ghodbunder & City)' },
+            { label: 'Thane (Ghodbunder & City)', city: 'Thane (Ghodbunder & City)' },
             { label: 'Kalyan-Dombivli (KDMC)', city: 'Kalyan-Dombivli (KDMC)' },
             { label: 'Ambernath & Badlapur', city: 'Ambernath & Badlapur' },
-            { label: 'Navi Mumbai (Panvel)', city: 'Navi Mumbai (Panvel & Vashi)' },
-            { label: 'Pune & PCMC', city: 'Pune & PCMC' }
+            { label: 'Navi Mumbai (Panvel & Vashi)', city: 'Navi Mumbai (Panvel & Vashi)' }
           ].map((c, idx) => (
             <button
               key={idx}
@@ -1181,13 +1198,13 @@ export default function App() {
               <div className="max-w-3xl mx-auto text-center space-y-3 mb-6">
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-semibold text-white">
                   <ShieldCheck className="w-4 h-4 text-orange-400" />
-                  Official MahaRERA Verified Directory • All-Inclusive Purchase Costs
+                  Official MahaRERA Verified Directory • Mumbai Metropolitan Region (MMR)
                 </div>
                 <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-                  Discover Real Estate in <span className="text-orange-400">Maharashtra</span>
+                  Discover Real Estate in <span className="text-orange-400">Mumbai & MMR</span>
                 </h1>
                 <p className="text-xs sm:text-sm text-blue-100 max-w-2xl mx-auto">
-                  Filter by City, Locality, Typology, and Construction Status below, or query any MahaRERA registration number directly.
+                  Filter by MMR Sub-Market, Locality, Typology, and Construction Status below, or query any MahaRERA registration number directly.
                 </p>
               </div>
 
@@ -1196,21 +1213,20 @@ export default function App() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-2 text-xs">
                   {/* Segment 1: City / Region Dropdown */}
                   <div className="lg:col-span-3">
-                    <label className="text-slate-500 font-bold block mb-1 uppercase text-[10px]">1. City / Region</label>
+                    <label className="text-slate-500 font-bold block mb-1 uppercase text-[10px]">1. MMR Sub-Market</label>
                     <select
                       value={selectedCityRegion}
                       onChange={(e) => setSelectedCityRegion(e.target.value)}
                       className="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-xl px-2.5 py-2 focus:outline-none focus:border-blue-600 font-medium"
                     >
-                      <option value="All">All Maharashtra</option>
+                      <option value="All">All Mumbai & MMR</option>
                       <option value="Mumbai Western Suburbs">Mumbai Western (Andheri, Bandra, Borivali)</option>
                       <option value="Mumbai Central Suburbs">Mumbai Central (Powai, Mulund)</option>
                       <option value="South Mumbai">South Mumbai (Worli)</option>
                       <option value="Thane (Ghodbunder & City)">Thane (Ghodbunder, Pokhran)</option>
                       <option value="Kalyan-Dombivli (KDMC)">Kalyan-Dombivli (KDMC)</option>
                       <option value="Ambernath & Badlapur">Ambernath & Badlapur</option>
-                      <option value="Navi Mumbai (Panvel & Vashi)">Navi Mumbai (Panvel)</option>
-                      <option value="Pune & PCMC">Pune & PCMC</option>
+                      <option value="Navi Mumbai (Panvel & Vashi)">Navi Mumbai (Panvel & Vashi)</option>
                     </select>
                   </div>
 
@@ -1226,7 +1242,7 @@ export default function App() {
                           setLocalityQuery(e.target.value);
                           setIsLocalityFocused(true);
                         }}
-                        placeholder="e.g. Andheri, Powai, Katrap, Chikhloli, Godrej..."
+                        placeholder="e.g. Andheri, Powai, Katrap, Chikhloli, Godrej, Oberoi..."
                         className="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-xl px-3 py-2 pr-7 focus:outline-none focus:border-blue-600 font-medium text-xs placeholder-slate-400"
                       />
                       {localityQuery && (
@@ -1245,7 +1261,7 @@ export default function App() {
                         {/* Matching Localities */}
                         {searchSuggestions.localities.length > 0 && (
                           <div className="p-3 border-b border-slate-100 bg-slate-50/70">
-                            <div className="text-[10px] uppercase font-bold text-slate-400 mb-1">Localities & Micro-Markets</div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 mb-1">MMR Localities & Micro-Markets</div>
                             <div className="flex flex-wrap gap-1">
                               {searchSuggestions.localities.map((loc, idx) => (
                                 <button
@@ -1364,9 +1380,9 @@ export default function App() {
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm flex flex-wrap items-center justify-between gap-3 text-xs">
               <div className="flex items-center gap-2 font-bold text-slate-800">
                 <SlidersHorizontal className="w-4 h-4 text-blue-600" />
-                <span>Verified Maharashtra Developments</span>
+                <span>Verified Mumbai & MMR Developments</span>
                 <span className="text-slate-500 font-normal">
-                  ({filteredProjects.length} matching {selectedCityRegion !== 'All' ? selectedCityRegion : 'across State'})
+                  ({filteredProjects.length} matching {selectedCityRegion !== 'All' ? selectedCityRegion : 'across MMR'})
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -1568,7 +1584,7 @@ export default function App() {
               <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 space-y-4">
                 <div className="flex items-center gap-2">
                   <Calculator className="w-5 h-5 text-blue-600" />
-                  <h3 className="text-base font-bold text-slate-900">Maharashtra All-Inclusive Purchase Cost Sheet</h3>
+                  <h3 className="text-base font-bold text-slate-900">Mumbai MMR All-Inclusive Purchase Cost Sheet</h3>
                 </div>
 
                 {(() => {
@@ -1581,7 +1597,7 @@ export default function App() {
                           <span className="font-bold text-slate-900">₹{b.baseInr.toLocaleString('en-IN')}</span>
                         </div>
                         <div className="flex justify-between py-1 border-b border-slate-200">
-                          <span className="text-slate-600">Stamp Duty (6.5% standard):</span>
+                          <span className="text-slate-600">Stamp Duty (6.5% MMR standard):</span>
                           <span className="font-bold text-blue-700">+ ₹{b.stampDuty.toLocaleString('en-IN')}</span>
                         </div>
                         <div className="flex justify-between py-1 border-b border-slate-200">
@@ -1634,7 +1650,7 @@ export default function App() {
             <div className="flex items-center justify-between pb-4 border-b border-slate-200">
               <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
                 <SlidersHorizontal className="w-6 h-6 text-blue-600" />
-                Project Comparison Matrix
+                MMR Project Comparison Matrix
               </h1>
               <button
                 onClick={() => setComparedProjectIds([])}
@@ -1695,9 +1711,9 @@ export default function App() {
               <div>
                 <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
                   <Table className="w-6 h-6 text-blue-600" />
-                  Google Sheets Leads Master
+                  Google Sheets Leads Master (MMR)
                 </h1>
-                <p className="text-xs text-slate-500">Real-time buyer inquiries synced with your CRM</p>
+                <p className="text-xs text-slate-500">Real-time MMR buyer inquiries synced with your CRM</p>
               </div>
               <button
                 onClick={() => {
@@ -1709,7 +1725,7 @@ export default function App() {
                   const encodedUri = encodeURI(csvContent);
                   const link = document.createElement('a');
                   link.setAttribute('href', encodedUri);
-                  link.setAttribute('download', 'flexigospaces_leads.csv');
+                  link.setAttribute('download', 'flexigospaces_mmr_leads.csv');
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
@@ -1766,11 +1782,11 @@ export default function App() {
 
             <div>
               <span className="text-[10px] bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full font-bold uppercase border border-blue-200">
-                Official MahaRERA Regulatory Query
+                Official MahaRERA MMR Query
               </span>
               <h3 className="text-xl font-bold text-slate-900 mt-1.5">Search by MahaRERA Number</h3>
               <p className="text-xs text-slate-500">
-                Enter any official MahaRERA registration number to verify sanctioned FSI, approved wings, legal status, and developer details.
+                Enter any official MahaRERA registration number across Mumbai & MMR to verify sanctioned FSI, approved wings, legal status, and developer details.
               </p>
             </div>
 
@@ -1801,9 +1817,9 @@ export default function App() {
                 </button>
               </div>
 
-              {/* Sample Real MahaRERA Chips */}
+              {/* Sample Real MahaRERA Chips - Mumbai MMR */}
               <div>
-                <span className="text-[11px] text-slate-400 font-semibold block mb-1">Or click a sample MahaRERA ID to test:</span>
+                <span className="text-[11px] text-slate-400 font-semibold block mb-1">Or click a sample MMR MahaRERA ID to test:</span>
                 <div className="flex flex-wrap gap-1.5">
                   {[
                     { rera: 'P51800034531', name: 'Kalpataru Vivant (Andheri East)' },
@@ -2020,7 +2036,7 @@ export default function App() {
         </div>
       )}
 
-      {/* Footer */}
+      {/* Footer - Strictly Mumbai MMR */}
       <footer className="bg-white border-t border-slate-200 py-10 px-4 sm:px-6 lg:px-8 text-xs text-slate-500 mt-auto">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-3">
@@ -2028,17 +2044,18 @@ export default function App() {
               FlexiGo<span className="text-orange-500">Spaces</span>
             </div>
             <p className="text-[11px] leading-relaxed">
-              Maharashtra MahaRERA verified real estate discovery, architectural intelligence, and API verification portal across Mumbai MMR and Maharashtra.
+              Mumbai & MMR MahaRERA verified real estate discovery, architectural intelligence, and regulatory lookup portal across the Mumbai Metropolitan Region.
             </p>
           </div>
           <div>
-            <h4 className="text-slate-800 font-semibold mb-2">Key MMR & Maharashtra Hubs</h4>
+            <h4 className="text-slate-800 font-semibold mb-2">Key Mumbai MMR Hubs</h4>
             <ul className="space-y-1 text-[11px]">
               <li>Mumbai Western Suburbs (Andheri, Bandra, Borivali)</li>
               <li>Mumbai Central Suburbs (Powai, Mulund)</li>
+              <li>South Mumbai (Worli, Lower Parel)</li>
               <li>Thane, Kalyan, Dombivli (KDMC)</li>
               <li>Ambernath & Badlapur Growth Corridor</li>
-              <li>Pune & PCMC IT Belts</li>
+              <li>Navi Mumbai & Panvel Airport Belt</li>
             </ul>
           </div>
           <div>
@@ -2052,12 +2069,12 @@ export default function App() {
           <div>
             <h4 className="text-slate-800 font-semibold mb-2">Google Sheets CRM</h4>
             <p className="text-[11px] leading-relaxed">
-              Google Sheets Master pipeline active. Customer inquiries logged with phone masking and instant CSV export.
+              Google Sheets Master pipeline active. Mumbai MMR customer inquiries logged with phone masking and instant CSV export.
             </p>
           </div>
         </div>
         <div className="max-w-7xl mx-auto pt-6 border-t border-slate-100 text-center text-[11px] text-slate-400">
-          © {new Date().getFullYear()} FlexiGoSpaces Real Estate Intelligence. All rights reserved.
+          © {new Date().getFullYear()} FlexiGoSpaces Real Estate Intelligence. All rights reserved. Dedicated to Mumbai & MMR.
         </div>
       </footer>
     </div>
